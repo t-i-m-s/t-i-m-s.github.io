@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block links %}
+	<link rel="stylesheet" href="{% static 'css/main_page_style.css' %}">
+{% endblock links %}
+
+
+{% block title %}
+	My-market
+{% endblock title %}
+
+
+{% block header %}
+	<input type="checkbox" id="autorisation">
+	<label for="autorisation">
+		<div id="wall">
+			<form action="{% url 'check_form' %}" method="POST" id="blank">
+				{% csrf_token %}
+				<input type="text" form="blank" required placeholder="Логин" name="login">
+				<input type="text" form="blank" required placeholder="Пароль" name="password">
+				<button type="submit">Отправить</button>
+			</form>
+		</div>
+	</label>
+	<label for="autorisation" id="sec_label"></label>
+{% endblock header %}
+
+
+{% block main %}
+	<div id="post_main_div">
+		<div class="main_content category"></div>
+		<div class="main_content product"></div>
+		<div class="main_content news"></div>
+	</div>
+{% endblock main %}
+
+
+{% block footer %}
+	
+{% endblock footer %}

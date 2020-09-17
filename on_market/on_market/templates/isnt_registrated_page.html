@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block links %}
+	<link rel="stylesheet" href="{% static 'css/isnt_registrated_page.css' %}">
+{% endblock links %}
+
+
+{% block title %}
+	Main menu
+{% endblock title %}
+
+
+{% block header %}
+	<input type="checkbox" id="autorisation">
+	<label for="autorisation">
+		<div id="wall">
+			<form action="{% url 'check_form' %}" method="POST" id="blank">
+				{% csrf_token %}
+				<div id="isnt_registrated">
+					<p id="incorrect">Неверный логин или пароль!!!</p>
+					<p>Если Вы еще не были зарегистрированы! Зарегистрироваться можете по этой <a href="http://127.0.0.1:8000/registration/">ссылке</a>!</p>
+				</div>
+				<input type="text" form="blank" placeholder="Логин" name="login">
+				<input type="text" form="blank" placeholder="Пароль" name="password">
+				<button type="submit">Отправить</button>
+			</form>
+		</div>
+	</label>
+	<label for="autorisation" id="sec_label"></label>
+{% endblock header %}
+
+
+{% block main %}
+	<div id="post_main_div">
+		<div class="main_content category"></div>
+		<div class="main_content product"></div>
+		<div class="main_content news"></div>
+	</div>
+{% endblock main %}
+
+
+{% block footer %}
+	
+{% endblock footer %}

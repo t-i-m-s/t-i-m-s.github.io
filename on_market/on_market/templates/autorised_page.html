@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block links %}
+	<link rel="stylesheet" href="{% static 'css/autorised_page.css' %}">
+{% endblock links %}
+
+
+{% block title %}
+	Main menu
+{% endblock title %}
+
+
+{% block header %}
+	<a id="username" href="#">{{ login }}</a>
+{% endblock header %}
+
+
+{% block main %}
+	<div id="post_main_div">
+		<div class="main_content category"></div>
+		<div class="main_content product"></div>
+		<div class="main_content news"></div>
+	</div>
+{% endblock main %}
+
+
+{% block footer %}
+	
+{% endblock footer %}

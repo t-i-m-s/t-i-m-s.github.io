@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block links %}
+	<link rel="stylesheet" href="{% static 'css/main_page_not_found_style.css' %}">
+{% endblock links %}
+
+
+{% block title %}
+	Main Page
+{% endblock title%}
+
+
+{% block header %}
+	<a href="#" id="profile"><p>Войти</p></a>
+{% endblock header %}
+
+
+{% block main %}
+	<div class="postmainblocks categories">
+		<form action="{% url 'products:sort' %}" id="filter" method="POST">
+			{% csrf_token %}
+			<div id="price_range">
+				<div><p>Цена:</p></div>
+				<div>
+					<p>От:</p>
+					<input type="number" placeholder="0" name="from" id="from" form="filter">
+				</div>
+				<div>
+					<p>До:</p>
+					<input type="number" placeholder="100" name="to" id="to" form="filter">
+				</div>
+			</div>
+			<div id="sort">
+				<div><p>Сортировать:</p></div>
+				<div>
+					<input type="radio" id="min" value="min" name="sortbutton" form="filter" checked>
+					<label for="min">Сначала дешевые</label>
+				</div>
+				<div>
+					<input type="radio" id="max" value="max" name="sortbutton" form="filter">
+					<label for="max">Сначала дорогие</label>
+				</div>
+			</div>
+			<button type="submit">Отсортировать</button>
+		</form>
+		<div class="postmainblocks tags">
+			<p id="category">Categories:</p>
+			{% for tag in tags_list %}
+				<a href="{% url 'products:category' tag %}">
+					<p>{{ tag }}</p>
+				</a>
+			{% endfor%}
+		</div>
+	</div>
+	<div class="postmainblocks products">
+		<div><p>Ничего не найдено (((</p></div>
+	</div>
+	<div class="postmainblocks news"></div>
+{% endblock main %}
+
+
+{% block footer %}
+{% endblock footer %}

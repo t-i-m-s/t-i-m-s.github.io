@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block links %}
+	<link rel="stylesheet" href="{% static 'css/registration_page.css' %}">
+{% endblock links %}
+
+
+{% block title %}
+	Registration
+{% endblock title %}
+
+
+{% block header %}
+	
+{% endblock header %}
+
+
+{% block main %}
+	<form action="{% url 'registration:leave_form' %}" method="POST" id="blank">
+		{% csrf_token %}
+		<input type="text" form="blank" required placeholder="Логин" name="login">
+		<input type="text" form="blank" required placeholder="Пароль" name="password">
+		<input type="text" form="blank" required placeholder="E-mail" name="e_mail">
+		<button type="submit">Зарегистрироваться!</button>
+	</form>
+{% endblock main %}
+
+
+{% block footer %}
+	
+{% endblock footer %}

@@ -1,0 +1,154 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100vw;
+	height: 400vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+header{
+	width: 100%;
+	height: 150px;
+	background-color: rgba(223, 228, 234,1.0);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+#site_name_link{
+	text-decoration: none;
+	margin-left: 5%;
+	font-size: 30px;
+	font-style: italic;
+	color: rgba(255, 107, 129,1.0);
+}
+#profile{
+	text-decoration: none;
+	margin-right: 5%;
+	font-size: 30px;
+	font-style: italic;
+	color: rgba(255, 107, 129,1.0);
+}
+#container{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(206, 214, 224,1.0);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.postmainblocks{
+	height: 95%;
+	background-color: rgba(164, 176, 190,1.0);
+}
+.categories{
+	width: 17%;
+	display: flex;
+	flex-direction: column;
+}
+.tags{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	box-sizing: content-box;
+	align-items: center;
+}
+.tags a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	padding: 2.5%;
+	box-sizing: padding-box;
+	background-color: rgba(18, 203, 196,1.0);
+	margin-top: 5%;
+	text-align: center;
+	border-radius: 20px;
+	border: solid 1.5px rgba(27, 20, 100,1.0);
+	text-decoration: none;
+}
+.tags a p{
+	font-weight: 700;
+	font-style: italic;
+	font-size: 120%;
+	color: rgba(255, 242, 0,1.0);
+	letter-spacing: 1px;
+}
+#category{
+	margin-top: 10%;
+	font-weight: 700;
+	font-style: italic;
+	font-size: 150%;
+	color: rgba(10, 61, 98,1.0);
+}
+#filter{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+#price_range{
+	width: 60%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+#price_range div{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 5px;
+}
+#price_range input{
+	display: block;
+	width: 100%;
+	padding: 0% 5%;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+}
+#sort{
+	display: flex;
+	flex-direction: column;
+	margin: 5% 0%;
+}
+#sort div{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 5px;
+	align-items: center;
+}
+#sort label{
+	margin-left: 5px;
+}
+.products{
+	width: 66%;
+	display: flex;
+	justify-content: center;
+}
+.products p{
+	font-style: italic;
+	font-weight: 700;
+	font-size: 35px;
+	letter-spacing: 1px;
+}
+.news{
+	width: 14%;
+}
+footer{
+	height: 200px;
+	width: 100%;
+	background-color: rgba(223, 228, 234,1.0);
+}
